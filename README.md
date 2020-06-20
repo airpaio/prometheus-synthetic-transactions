@@ -1,5 +1,5 @@
 ### UI Automation & Docker Containerization
 
-This repo extends the previous example of UI automation using Python and Selenium from [https://github.com/airpaio/ui-automation](https://github.com/airpaio/ui-automation). The code accompany's the second in a series of blog posts on monitoring and observability which can be found on [airpa.io](https://airpa.io).
+This repo extends the previous example of UI automation using Python and Selenium from [https://github.com/airpaio/ui-automation-docker](https://github.com/airpaio/ui-automation-docker). The code accompany's the second in a series of blog posts on monitoring and observability which can be found on [airpa.io](https://airpa.io).
 
-The Python code here is not changed from the previous repo [https://github.com/airpaio/ui-automation](https://github.com/airpaio/ui-automation), but the main difference here is a Dockerfile used to build a Docker image to run the code in.
+Additions to this code which may be different from the repo at [https://github.com/airpaio/ui-automation-docker](https://github.com/airpaio/ui-automation-docker), include a custom collector of metrics for exporting to Prometheus. The actual Synthetic class from the previos repo is unchanged. Read more about it at [airpa.io](https://airpa.io).
