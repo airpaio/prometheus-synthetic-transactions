@@ -1,0 +1,15 @@
+# prometheus.yml
+global:
+    scrape_interval: 15s
+    external_labels:
+        monitor: 'airpa-monitoring'
+scrape_configs:
+    - job_name: 'prometheus'
+      static_configs:
+        - targets: ['prometheus:9090']
+    - job_name: 'synthetic-airpa'
+      scrape_interval: 1m
+      scrape_timeout: 30s
+      metrics_path: /synthetic-metrics
+      static_configs:
+        - targets: ['synthetic-airpa:9901']

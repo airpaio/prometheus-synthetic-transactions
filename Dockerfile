@@ -12,15 +12,15 @@ RUN apk add chromium chromium-chromedriver
 RUN pip install --upgrade pip
 
 # Create a folder for our project
-RUN mkdir -p /synthetic_airpa
-WORKDIR /synthetic_airpa
+RUN mkdir -p /prometheus_synthetic_airpa
+WORKDIR /prometheus_synthetic_airpa
 
 # Copy and install our requirements.txt dependencies
-COPY requirements.txt /synthetic_airpa 
+COPY requirements.txt /prometheus_synthetic_airpa 
 RUN pip install -r requirements.txt
 
-# Copy our python script inside /synthetic_airpa
-COPY syn_airpa.py /synthetic_airpa 
+# Copy our python inside /prometheus_synthetic_airpa
+COPY syn_airpa.py /prometheus_synthetic_airpa 
 
 # Run our python script
 ENTRYPOINT python3 syn_airpa.py
