@@ -139,10 +139,13 @@ def synthetic_run(username, password):
 
     return landing_page_load_time, login_time, logout_time
 
-if __name__ == "__main__":
+def main():
     start_http_server(port=9901)
     print('Listening on localhost:9901')
     print('Metrics will be scraped from http://127.0.0.1:9901/synthetic-metrics')
     REGISTRY.register(SyntheticCollector())    
     while True:
         time.sleep(1)
+
+# run the main collector
+main()
